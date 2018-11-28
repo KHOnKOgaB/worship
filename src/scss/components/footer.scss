@@ -1,0 +1,46 @@
+.footer {
+	position: absolute;
+	bottom: 0;
+	padding: 20px 0;
+	color: white;
+	margin: 0 auto;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.footer__content {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 148px;
+}
+
+.icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/socialWhite.svg);
+    background-repeat: no-repeat;
+}
+
+.social-vk {
+    background-position-x: 0px;
+}
+
+.social-facebook {
+    background-position-x: -70px;
+}
+
+.social-instagram {
+    background-position-x: -140px;
+}
+
+.social-youtube {
+    background-position-x: -210px;
+}
