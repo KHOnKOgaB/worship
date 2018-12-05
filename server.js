@@ -6,8 +6,11 @@ const dbURL = require('./config/db');
 const port = 8000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/build'));
 
 // require('./routes')(app, {});
+
+// res.sendFile(__dirname + './index.html')
 
 MongoClient.connect(dbURL.url, { useNewUrlParser: true }, (err, database) => {
 	if (err) return console.log(err)
@@ -15,6 +18,7 @@ MongoClient.connect(dbURL.url, { useNewUrlParser: true }, (err, database) => {
 	var db = database.db('notes__test')
 
 	require('./routes')(app, db);
+	
 	app.listen(port, () => {
 		console.log('We are live on ' + port);
 	});               
