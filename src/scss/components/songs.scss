@@ -1,0 +1,72 @@
+.songs {
+    background: url('../img/songsBackground.jpg') no-repeat 0 0;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.songs__container {
+    display: grid;
+    padding-top: 120px;
+    grid-template-columns: repeat (5, 1fr);
+    grid-template-areas:
+        "sl t t t sf";
+}
+
+.songs__nav {
+    grid-area: sl;
+    height: 80vh;
+    width: 100%;
+
+    .__search__song {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .__search__field {}
+
+        .__search__submit {
+            width: 34px;
+            height: 34px;
+            padding-left: 10px;
+
+        }
+
+    }
+
+    li {
+        border-top: 1px solid black;
+        padding: 5px;
+
+        &:nth-last-child {
+            border-bottom: 1px solid black;
+        }
+    }
+
+}
+
+.song__text {
+    grid-area: t;
+    height: 80vh;
+    width: 100%;
+}
+
+.song__feauters {
+    grid-area: sf;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+
+    a {
+        padding-top: 10px;
+        cursor: pointer;
+    }
+
+    p {
+        font-weight: 700;
+    }
+}
