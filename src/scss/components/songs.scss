@@ -10,7 +10,7 @@
     padding-top: 120px;
     grid-template-columns: repeat (5, 1fr);
     grid-template-areas:
-        "sl t t t sf";
+        "sl st st st sf";
 }
 
 .songs__nav {
@@ -46,7 +46,7 @@
 }
 
 .song__text {
-    grid-area: t;
+    grid-area: st;
     height: 80vh;
     width: 100%;
 }
@@ -62,7 +62,7 @@
 
 
     a {
-        padding-top: 10px;
+        padding-top: 20px;
         cursor: pointer;
     }
 
