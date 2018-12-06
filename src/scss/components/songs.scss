@@ -8,15 +8,14 @@
 .songs__container {
     display: grid;
     padding-top: 120px;
-    grid-template-columns: repeat (5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
         "sl st st st sf";
 }
 
 .songs__nav {
     grid-area: sl;
-    height: 80vh;
-    width: 100%;
+    min-height: 80vh;
 
     .__search__song {
         display: flex;
@@ -47,14 +46,12 @@
 
 .song__text {
     grid-area: st;
-    height: 80vh;
-    width: 100%;
+    min-height: 80vh;
 }
 
 .song__feauters {
     grid-area: sf;
-    height: 80vh;
-    width: 100%;
+ 	min-height: 80vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
