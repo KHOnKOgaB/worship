@@ -3,18 +3,27 @@
     background-size: cover;
     min-height: 100vh;
     width: 100%;
-  
- .welcome__lyric {
-	position: absolute;
-	bottom: 0;
-	padding: 160px 165px;
-	right: 0;
- } 
- p {
- 	color: white;
- 	font-size: 24px;
- 	line-height: 1.4;
- }
+    
 
+    .banner__content {
+    	position: relative;
+    	margin: 0 auto;
+    	width: 100%;
+    	min-height: calc(100vh - 220px);
 
     }
+
+    .content__welcome-lyrics {
+        position: absolute;
+        bottom: 50px;
+        right: 250px;
+    }
+
+   .lyrics__text {
+        color: $white;
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+
+}

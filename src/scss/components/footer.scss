@@ -1,8 +1,6 @@
 .footer {
-    bottom: 0;
     padding: 20px 0;
     margin: 0 auto;
-    left: 50%;
 }
 
 .footer__content {
@@ -12,7 +10,7 @@
 }
 
 
-.left-container {
+.footer__left-container {
     color: white;
 }
 
@@ -48,9 +46,9 @@
 }
 
 
-.black__footer {
-    .left-container {
-        color: black;
+.songs__footer--black {
+    .footer__left-container {
+        color: $black;
     }
 
     .icon {

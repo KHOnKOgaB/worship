@@ -1,23 +1,36 @@
 <section class="songs">
-    <div class="wrapper songs__container">
-        <div class="songs__nav">
-            <form class="__search__song">
-                <input class="__search__field" type="search" placeholder="Найти песню">
-                <input class="__search__submit" type="image" src="/img/loupe.svg" title="Найти">
+    //= header.html
+    <div class="songs__container">
+        <div class="container__list">
+            <form class="search__form">
+                <input id="search__input" type="search" placeholder="Найти песню">
+                <input id="search__button" type="image" src="/img/search.svg" title="Найти" alt="Найти песню">
             </form>
-            <ul class="songs__list">
-                <li class="songs__list__item">В реке Твоей</li>
+            <ul class="list-songs">
+                <li class="list-songs__item"><a class="list-songs__link" href="">Песня 1</a></li>
+                <li class="list-songs__item"><a class="list-songs__link" href="">Песня 2</a></li>
+                <li class="list-songs__item"><a class="list-songs__link" href="">Песня 3</a></li>
+                <li class="list-songs__item"><a class="list-songs__link" href="">Песня 4</a></li>
+                <li class="list-songs__item"><a class="list-songs__link" href="">Песня 5</a></li>
             </ul>
         </div>
-        <div class="song__text"></div>
-        <div class="song__feauters">
-        	<p>Аудио партии:</p>
-        	<a class="altVoice"><img src="/img/altVoice.png"></a>
-        	<a class="altVoice"><img src="/img/tenorVoice.png"></a>
-			<p>Ноты:</p>
-			<a class="altVoice"><img src="/img/notes.png"></a>
-			<p>Презентация:</p>
-			<a class="altVoice"><img src="/img/presentation.png"></a>
+        <div class="container__text">
+        </div>
+        <div class="container__features alignment">
+            <div class="features__vocal-part alignment">
+                <p class="features__name">Партия:</p>
+                <a class="features__link" href=""><img src="/img/altVoice.png"></a>
+                <a class="features__link" href=""><img src="/img/tenorVoice.png"></a>
+            </div>
+            <div class="features__notes alignment">
+                <p class="features__name">Ноты:</p>
+                <a class="features__link" href=""><img src="/img/notes.png"></a>
+            </div>
+            <div class="features__presentation alignment">
+                <p class="features__name">Презентация:</p>
+                <a class="features__link" href=""><img src="/img/presentation.png"></a>
+            </div>
         </div>
     </div>
+    //= footer.html
 </section>

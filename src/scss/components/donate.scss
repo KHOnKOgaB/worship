@@ -6,19 +6,20 @@
 }
 
 .donate__containter {
+    padding-top: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 200px;
+    align-items: flex-start;
+    min-height: calc(100vh - 320px);
 }
 
 
-.donate__yandex {
+.container__yandex {
     width: 350px;
 
 }
 
-.donate__about {
+.container__about {
     color: white;
     font-size: 22px;
     width: 620px;
