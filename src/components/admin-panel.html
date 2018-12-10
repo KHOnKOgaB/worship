@@ -7,8 +7,8 @@
         <p class="admin__text --uppercase">Консоль управления контентом</p>
         <input class="admin__add-song" type="image" src="/img/plus.svg" title="Добавить песню">
     </div>
-    <div class="songs__container">
-        <div class="container__list">
+    <div class="admin__songs-container">
+        <div class="admin__container-list">
             <form class="search__form">
                 <input id="search__input" type="search" placeholder="Найти песню">
                 <input id="search__button" type="image" src="/img/search.svg" title="Найти" alt="Найти песню">
@@ -21,12 +21,19 @@
                 <li class="list-songs__item"><a class="list-songs__link" href="">Песня 5</a></li>
             </ul>
         </div>
-        <disv class="container__text alignment">
-            <form class="text__admin-edit alignment">
+        <disv class="admin__container-text admin__alignment">
+            <form class="text__admin-edit admin__alignment">
                 <p class="admin-edit__header">Название песни:</p>
                 <input id="song-name" name="song-name" type="text" placeholder="Название песни">
                 <p class="admin-edit__header">Текст песни:</p>
-                <textarea id="song-text" name="song-text"></textarea>
+                <textarea cols="100" rows="20" id="song-text" name="song-text"></textarea>
+                <p class="admin-edit__header">Основная партия:</p>
+                <input id="main-voice" name="main-voice" placeholder="http://worship.odomkrd.ru/voices/main">
+                <p class="admin-edit__header">Альт:</p>
+                <input id="alt-voice" name="alt-voice" placeholder="http://worship.odomkrd.ru/voices/alt">
+                <p class="admin-edit__header">Тенор:</p>
+                 <input id="tenor-voice" name="tenor-voice" placeholder="http://worship.odomkrd.ru/voices/tenor">
+
                 <p class="admin-edit__header">Ссылка на ноты:</p>
                 <input id="song-notes" name="song-notes" type="text" placeholder="http://worship.odomkrd.ru/notes/">
                 <p class="admin-edit__header">Ссылка на презентацию:</p>

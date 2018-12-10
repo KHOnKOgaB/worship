@@ -1,114 +1,115 @@
 .admin-panel {
     background-color: #052333;
     min-height: 100vh;
+}
 
-    .admin__header {
-        padding-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+.admin__header {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-        .admin__text {
-            color: $white;
-        }
-
-        .admin__add-song {
-            width: 30px;
-            height: 30px;
-        }
+    .admin__text {
+        color: $white;
     }
 
-    .admin__footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .footer__info {
-            color: $white;
-        }
+    .admin__add-song {
+        width: 30px;
+        height: 30px;
     }
+}
 
-    .songs__container {
-        padding: 40px;
-        min-height: calc(100vh - 220px);
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 5fr 1fr;
-        grid-gap: 10px;
-        grid-template-areas:
-            "sl st sf";
+.admin__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 
+    .footer__info {
+        color: $white;
+    }
+}
 
-        .container__list {
-            grid-area: sl;
-
-            .search__form {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 10px;
-
-                #search__button {
-                    width: 24px;
-                    height: 24px;
-                    padding: 0px 10px;
-                }
+.admin__songs-container {
+    padding: 30px;
+    min-height: calc(100vh - 220px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "sl st sf";
 
 
-            }
+    .admin__container-list {
+        grid-area: sl;
 
-            .list-songs {
-                display: flex;
-                flex-direction: column;
-                padding: 0px 25px;
-
-                .list-songs__item {
-                    padding: 10px 0px;
-                }
-
-                .list-songs__link {
-                    text-decoration: none;
-                    color: $white;
-                }
-            }
-
-        }
-
-        .container__text {
-            grid-area: st;
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-
-            input {
-                min-width: 200px;
-            }
-
-            .admin-edit__header {
-                font-size: 18px;
-                font-weight: 400;
-                padding: 20px 0 10px 0;
-            }
-            
-            #song-save {
-                margin-top: 20px;
-                border-radius: 10px;
-                padding: 2px;
-
-
-                &:hover {
-                    background-color: #052333;
-                    color: $white;
-                }
-            }
-        }
-
-        .alignment {
+        .search__form {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
+            padding: 10px;
+
+            #search__button {
+                width: 24px;
+                height: 24px;
+                padding: 0px 10px;
+            }
+
 
         }
+
+        .list-songs {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 25px;
+
+            .list-songs__item {
+                padding: 10px 0px;
+            }
+
+            .list-songs__link {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+
+    }
+
+    .admin__container-text {
+        grid-area: st;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+
+        input {
+            min-width: 200px;
+        }
+
+        .admin-edit__header {
+            font-size: 18px;
+            font-weight: 400;
+            padding: 15px 0 10px 0;
+        }
+
+        #song-save {
+            margin-top: 20px;
+            border-radius: 10px;
+            padding: 2px;
+
+
+            &:hover {
+                background-color: #052333;
+                color: $white;
+            }
+        }
+    }
+
+    .admin__alignment {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
     }
 
