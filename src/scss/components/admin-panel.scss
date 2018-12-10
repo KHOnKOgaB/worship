@@ -1,76 +1,115 @@
-.adminPanel {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: 70px minmax(80vh, auto) 50px;
-	grid-template-areas:
-	"h h h h"
-	"c e e e"
-	"f f f f";
-	height: 100vh;
+.admin-panel {
+    background-color: #052333;
+    min-height: 100vh;
 
-	li {
-		border-top: 1px solid gray;
-		padding: 5px;
-		
-		&:nth-last-child {
-			border-bottom: 1px solid gray;
-		}
-	}
-}
-.songContent {
-	grid-area: c;
-	background-color: white;
+    .admin__header {
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
 
-	.song__search {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+        .admin__text {
+            color: $white;
+        }
 
-		.__search__submit {
-			width: 34px;
-			height: 34px;
-			padding-left: 10px;
-		}
+        .admin__add-song {
+            width: 30px;
+            height: 30px;
+        }
+    }
 
-	}
-}
-.songEdit {
-	grid-area: e;
-	background-color: yellow;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+    .admin__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-.admin__header {
-	grid-area: h;
-	background-color: black;
-	display: flex;
-	align-items: center;
-	padding: 0px 70px;
-	justify-content: space-around;
+        .footer__info {
+            color: $white;
+        }
+    }
 
-	.addSong {
-		width: 40px;
-		height: 40px;
-	}
-}
+    .songs__container {
+        padding: 40px;
+        min-height: calc(100vh - 220px);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+            "sl st sf";
 
-.admin__footer {
-	grid-area: f;
-	background-color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
-.admin__text {
-	padding: 0px 40px;
-	font-size: 16px;
-	font-weight: 600;
-	color: white;
-}
+        .container__list {
+            grid-area: sl;
 
-.song__search {
-	padding: 10px 10px;
+            .search__form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+
+                #search__button {
+                    width: 24px;
+                    height: 24px;
+                    padding: 0px 10px;
+                }
+
+
+            }
+
+            .list-songs {
+                display: flex;
+                flex-direction: column;
+                padding: 0px 25px;
+
+                .list-songs__item {
+                    padding: 10px 0px;
+                }
+
+                .list-songs__link {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+
+        }
+
+        .container__text {
+            grid-area: st;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+
+            input {
+                min-width: 200px;
+            }
+
+            .admin-edit__header {
+                font-size: 18px;
+                font-weight: 400;
+                padding: 20px 0 10px 0;
+            }
+            
+            #song-save {
+                margin-top: 20px;
+                border-radius: 10px;
+                padding: 2px;
+
+
+                &:hover {
+                    background-color: #052333;
+                    color: $white;
+                }
+            }
+        }
+
+        .alignment {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+
+    }
+
 }
