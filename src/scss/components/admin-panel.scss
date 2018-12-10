@@ -1,0 +1,76 @@
+.adminPanel {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 70px minmax(80vh, auto) 50px;
+	grid-template-areas:
+	"h h h h"
+	"c e e e"
+	"f f f f";
+	height: 100vh;
+
+	li {
+		border-top: 1px solid gray;
+		padding: 5px;
+		
+		&:nth-last-child {
+			border-bottom: 1px solid gray;
+		}
+	}
+}
+.songContent {
+	grid-area: c;
+	background-color: white;
+
+	.song__search {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.__search__submit {
+			width: 34px;
+			height: 34px;
+			padding-left: 10px;
+		}
+
+	}
+}
+.songEdit {
+	grid-area: e;
+	background-color: yellow;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.admin__header {
+	grid-area: h;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	padding: 0px 70px;
+	justify-content: space-around;
+
+	.addSong {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.admin__footer {
+	grid-area: f;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.admin__text {
+	padding: 0px 40px;
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+}
+
+.song__search {
+	padding: 10px 10px;
+}
