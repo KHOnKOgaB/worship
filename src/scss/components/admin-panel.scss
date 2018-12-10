@@ -4,7 +4,7 @@
 }
 
 .admin__header {
-    padding-top: 20px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -31,7 +31,7 @@
 }
 
 .admin__songs-container {
-    padding: 30px;
+    padding: 10px;
     min-height: calc(100vh - 220px);
     width: 100%;
     display: grid;
