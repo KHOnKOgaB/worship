@@ -1,9 +1,10 @@
 const express = require('express');
-const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 const app = express();
-const dbURL = require('./config/db');
 const port = 8000;
+
+const Datastore = require('nedb');
+const db = new Datastore({ filename: './db/datafile', autoload: true });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/build'));
@@ -12,14 +13,10 @@ app.use(express.static(__dirname + '/build'));
 
 // res.sendFile(__dirname + './index.html')
 
-MongoClient.connect(dbURL.url, { useNewUrlParser: true }, (err, database) => {
-	if (err) return console.log(err)
 
-	var db = database.db('notes__test')
 
-	require('./routes')(app, db);
-	
-	app.listen(port, () => {
-		console.log('We are live on ' + port);
-	});               
-})
+require('./routes')(app, db);
+
+app.listen(port, () => {
+	console.log('We are live on ' + port);
+}); 

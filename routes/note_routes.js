@@ -1,10 +1,21 @@
 module.exports = function(app, db_) {
-	var ObjectID = require('mongodb').ObjectID;
+
+
+	app.get('/notes', (req, res) => {
+		db_.find({}, (err, arr) => {
+			if (err) {
+				res.send({ 'error': 'An error has occurred' });
+			} else {
+				res.send(arr);
+			}
+		});
+
+	});
 
 	app.get('/notes/:id', (req, res) => {
 		const id = req.params.id;
-		const details = { '_id': new ObjectID(id) };
-		db_.collection('notes').findOne(details, (err, item) => {
+		const details = { '_id': id };
+		db_.findOne(details, (err, item) => {
 			if (err) {
 				res.send({ 'error': 'An error has occurred' });
 			} else {
@@ -18,11 +29,11 @@ module.exports = function(app, db_) {
 
 		const note = { text: req.body.body, title: req.body.title };
 
-		db_.collection('notes').insertOne(note, (err, result) => {
+		db_.insert(note, (err, newDoc) => {
 			if (err) {
 				res.send({ 'error': 'An error has occurred' });
 			} else {
-				res.send(result.ops[0]);
+				res.send(newDoc);
 			}
 		});
 
@@ -31,12 +42,11 @@ module.exports = function(app, db_) {
 
 	app.delete('/notes/:id', (req, res) => {
 		const id = req.params.id;
-		const details = { '_id': new ObjectID(id) };
-		db_.collection('notes').remove(details, (err, item) => {
+		db_.remove({ _id: id }, {}, (err, numRemoved) => {
 			if (err) {
 				res.send({ 'error': 'An error has occurred' });
 			} else {
-				res.send('Note ' + id + ' deleted!');
+				res.send('Note ' + numRemoved + ' deleted!');
 			}
 		});
 	});
@@ -45,7 +55,7 @@ module.exports = function(app, db_) {
 		const id = req.params.id;
 		const details = { '_id': new ObjectID(id) };
 		const note = { text: req.body.body, title: req.body.title };
-		db_.collection('notes').update(details, note, (err, result) => {
+		db_.update(details, note, (err, result) => {
 			if (err) {
 				res.send({ 'error': 'An error has occurred' });
 			} else {
