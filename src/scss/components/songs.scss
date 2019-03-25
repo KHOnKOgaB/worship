@@ -56,6 +56,13 @@
         grid-area: st;
         background-color: white;
         border-radius: 10px;
+        text-align: center;
+        padding: 20px 0;
+
+        .title {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
     }
 
     .container__features {
