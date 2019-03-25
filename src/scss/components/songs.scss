@@ -7,7 +7,7 @@
     min-height: calc(100vh - 220px);
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-gap: 10px;
     grid-template-areas:
         "sl st sf";
@@ -60,7 +60,7 @@
 
     .container__features {
         grid-area: sf;
-        
+
 
         .features__name {
             color: $white;
@@ -68,6 +68,50 @@
             text-transform: uppercase;
             padding: 10px 0px;
         }
+
+        .features__link {
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        &:nth-last-child {
+            padding-bottom: 100px;
+        }
+
+        .voiceTone {
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+            display: block;
+            padding-bottom: 5px;
+            position: relative;
+
+            &:after {
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                content: "";
+                height: 1px;
+                width: 0%;
+                background: #ffffff;
+                -webkit-transition: width .3s ease-in-out;
+                transition: width .3s ease-in-out;
+
+
+            }
+
+            &:hover {
+                &:after {
+
+                    width: 100%;
+                }
+
+            }
+        }
+
+
+
     }
 
     .alignment {
