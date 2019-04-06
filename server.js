@@ -13,10 +13,8 @@ app.use(express.static(__dirname + '/build'));
 
 // res.sendFile(__dirname + './index.html')
 
-
-
 require('./routes')(app, db);
 
 app.listen(port, () => {
 	console.log('We are live on ' + port);
-}); 
+});
